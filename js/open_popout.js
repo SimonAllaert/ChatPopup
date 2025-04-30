@@ -3,6 +3,9 @@ function open_popout() {
     if (window.screenX < 0) {
         leftBoundry = -412;
     }
+    else if (window.screenX > 0) {
+        leftBoundry = window.screenX + (window.screen.width - 412);
+    }
     window.open("popout.html", undefined, `noopener, popup, width=402, height=666, left=${leftBoundry}, top=${50}`);
-    window.close();
+    //window.close();
 }
