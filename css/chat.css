@@ -1,4 +1,12 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
+    width: 100%;
+    height: 100%;
     background-color: #18181B;
     color: #EFEFF1;
     font-family: "Inter", Helvetica, Arial, sans-serif;
@@ -7,9 +15,12 @@ body {
     line-height: 20px;
 }
 
+/* HEADER */
+
 header {
     height: 50px;
     width: 100%;
+    background-color: #18181B;
     border-bottom: 1px solid rgb(83, 83, 95, 0.48);
     text-align: center;
     margin: auto;
@@ -27,9 +38,64 @@ h4 {
     font-style: normal;
 }
 
-#chat-section {
-    flex-direction: column;
+/* CHAT */
+
+#chat-room {
+    width: 100%;
+    height: calc(100% - 130.5px);
+    z-index: -1;
 }
+
+#scroll-content {
+    padding: 0 0 11px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    bottom: 91.5px;
+    justify-content: flex-end;
+    z-index: inherit;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#chat::-webkit-scrollbar {
+    width: 11px;
+}
+
+#chat::-webkit-scrollbar-track {
+    display: hidden;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background-color: #69696B;
+    border-radius: 15px;
+}
+
+
+.chat-message {
+    margin: 0 0 0 10px;
+    padding: 5px 20px 5px 10px;
+}
+
+.chat-message:hover {
+    background-color: #3D3D40;
+    border-radius: 4px;
+}
+
+.message-user {
+    float: left;
+    font-weight: 700;
+}
+
+.message-content {
+    font-weight: 400;
+}
+
+/* FOOTER */
 
 footer {
     width: 100%;
