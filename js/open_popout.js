@@ -1,11 +1,12 @@
 function open_popout() {
-    var leftBoundry = window.screen.width - 412;
+    const width = 400
+    var leftBoundry = window.screen.width - width;
     if (window.screenX < 0) {
-        leftBoundry = -412;
+        leftBoundry = -width;
     }
     else if (window.screenX > 0) {
-        leftBoundry = window.screenX + (window.screen.width - 412);
+        leftBoundry = window.screenX + (window.screen.width - width);
     }
-    window.open("popout.html", undefined, `noopener, popup, width=402, height=666, left=${leftBoundry}, top=${50}`);
+    window.open("popout.html", undefined, `noopener, popup, resizable=false, width=${width}, height=600, left=${leftBoundry}, top=${50}`);
     //window.close();
 }

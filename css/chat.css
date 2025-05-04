@@ -1,8 +1,123 @@
 body {
-    background-color: #3D3D40;
+    background-color: #18181B;
     color: #EFEFF1;
     font-family: "Inter", Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 20px;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgb(83, 83, 95, 0.48);
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+h4 {
+    margin: 0 auto 0 auto;
+    color: #DEDEE3;
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    font-style: normal;
+}
+
+#chat-section {
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    padding: 0 10px 10px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#chat-banner {
+    width: 100%;
+    height: 35px;
+    margin: 0 0 -4px 0;
+    background-color: #1F1F23;
+    border: 1px solid #3c3f43;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+}
+
+#info-container {
+    width: 18px;
+    height: 18px;
+    margin: 3px 9px 0 10px;
+}
+
+#info-span {
+    width: 18px;
+    height: 18px;
+}
+
+#info {
+    color: #ADADB8;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#banner-text {
+    margin: 4px 0 0 2px;
+    color: #ADADB8;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+#chat-box {
+    width: 100%;
+    height: 39.5px;;
+    background-color: #18181B;
+    border: 1px solid #67676B;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+}
+
+#star-box {
+    width: 20px;
+    height: 20px;
+    margin: 9px 9px 10px 9px;
+    background-color: #464649;
+    border-radius: 3px;
+}
+
+
+#star-container {
+    width: 14.63px;
+    height: 16px;
+    margin: auto;
+}
+
+#star-span {
+    width: 100%;
+    height: 100%;
+}
+
+#star {
+    color: #8D8D91;
+    line-height: 1.5;
+}
+
+#chat-box:hover {
+    box-shadow: 0 0 0 1px #67676B inset;
+    cursor: text;
+}
+
+#input-placeholder {
+    padding: 10px 0 10px 0;
+    color: #909091;
+    line-height: 1.5;
+    font-weight: 600;
 }
