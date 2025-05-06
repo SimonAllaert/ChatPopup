@@ -64,6 +64,7 @@ const loadChatMessage = (message_object) => {
 const emotes = new Map();
 emotes.set("KEKW", "https://cdn.frankerfacez.com/emoticon/381875/1");
 
+loadChatMessage(chat3);
 loadChatMessage(chat2);
 loadChatMessage(chat2);
 loadChatMessage(chat1);

@@ -85,7 +85,7 @@ h4 {
 .chat-message {
     min-height: 30px;
     margin: 0 6px 0 10px;
-    padding: auto 20px auto 10px;
+    padding: 5px 20px 0 10px;
     overflow-wrap: break-word;
     align-items: center;
 }
