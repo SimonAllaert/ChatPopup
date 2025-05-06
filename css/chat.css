@@ -83,9 +83,11 @@ h4 {
 }
 
 .chat-message {
+    min-height: 30px;
     margin: 0 6px 0 10px;
-    padding: 5px 20px 5px 10px;
+    padding: auto 20px auto 10px;
     overflow-wrap: break-word;
+    align-items: center;
 }
 
 .chat-message:hover {
@@ -94,11 +96,14 @@ h4 {
 }
 
 .message-user {
+    margin: auto 0 auto 0;
     float: left;
     font-weight: 700;
+    vertical-align: baseline;
 }
 
 .message-content {
+    margin: auto 0 auto 0;
     font-weight: 400;
     vertical-align: baseline;
 }
