@@ -53,6 +53,7 @@ const loadChatMessage = (message_object) => {
     }
 }
 
+//const start_time = performance.now()
 const emotes = new Map();
 emotes.set("KEKW", "https://cdn.frankerfacez.com/emoticon/381875/1");
 emotes.set("hi", "https://cdn.7tv.app/emote/01GX6M9TRR000DJJ63WGMEA4Z8/1x.avif");
@@ -251,7 +252,8 @@ emotes.set("sex", "https://cdn.7tv.app/emote/01FY6CAAHG000FWWXFD46PASF9/1x.webp"
 emotes.set("SKINWALKER", "https://cdn.7tv.app/emote/01FS2G2F400002F97PTSA4XGK4/1x.webp");
 emotes.set("Worth", "https://cdn.7tv.app/emote/01FM102KS00008TM5NY9QEGS60/4x.webp");
 emotes.set("ZiggsJAM", "https://cdn.7tv.app/emote/01GZHNRDK00008MPCP0AD5VJSH/1x.webp");
-
+//const end_time = performance.now();
+//console.log(`Importing emotes took ${end_time - start_time}ms`)
 
 /*loadChatMessage(chat3);
 loadChatMessage(chat2);
