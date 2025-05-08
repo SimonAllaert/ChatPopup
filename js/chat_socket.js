@@ -1,10 +1,3 @@
-
-
-const chat1 = {id: 42, user: "mrscooby_doo", color: "#1E90FF", content: "hi MONK KEKW EEEY!!!"};
-const chat2 = {id: 44, user: "stellamelonn", color: "#FF69B4", content :"im gonna touch you"};
-const chat3 = {id: 50, user: "dubstep_dalton", color: "#C91F1F", content: "ant to submit a video? Rules: Vid KEKW must be safe for Twitch, 60 seconds or less, and be a working YouTube, Tiktok, KEKW Instagram, or Twitter link. Each request costs $3. Click this link and put your vid link in the donation message by itself: https://streamelements.com/jimmyhere/tip All tips are final and much appreciated. I have the right to not watch/listen to requests."}
-
-
 const loadChatMessage = (message_object) => {
     const chat = document.getElementById("chat");
     const scrolled_to_bottom = (chat.clientHeight + chat.scrollTop) > (chat.scrollHeight - 10);
@@ -49,6 +42,7 @@ const loadChatMessage = (message_object) => {
     chat_message.appendChild(content);
 
     if (scrolled_to_bottom) {
+        chat.scrollTo(0, chat.scrollHeight);
         chat.scrollTo(0, chat.scrollHeight);
     }
 }
@@ -183,8 +177,8 @@ emotes.set("4Head", "https://static-cdn.jtvnw.net/emoticons/v2/354/default/dark/
 emotes.set("3Heading", "https://cdn.betterttv.net/emote/5f5cbe0268d9d86c020e615c/1x.webp");
 emotes.set("AKSHANING", "https://cdn.betterttv.net/emote/621619b006fd6a9f5be55da9/1x.webp");
 emotes.set("akshanYes", "https://cdn.betterttv.net/emote/61d2036a06fd6a9f5bdf0ec1/1x.webp");
-emotes.set("ALIENALIENALIENALIENALIEN", "https://cdn.betterttv.net/emote/5fcfb67a8c4e2c46195d583c/2x.webp");
-emotes.set("Aware", "https://cdn.betterttv.net/emote/6151c623b63cc97ee6d39040/3x.webp");
+emotes.set("ALIENALIENALIENALIENALIEN", "https://cdn.betterttv.net/emote/5fcfb67a8c4e2c46195d583c/1x.webp");
+emotes.set("Aware", "https://cdn.betterttv.net/emote/6151c623b63cc97ee6d39040/1x.webp");
 emotes.set("Bagel", "https://cdn.betterttv.net/emote/664739c85a1c91a74b73bcf1/1x.webp");
 emotes.set("BASED", "https://cdn.betterttv.net/emote/61a1b1b8b50549e7e50116b2/1x.webp");
 emotes.set("Bean", "https://cdn.betterttv.net/emote/60617f167493072efdeb6767/1x.webp");
@@ -214,8 +208,8 @@ emotes.set("OMEGALULiguess", "https://cdn.betterttv.net/emote/5f8dea786f583802e3
 emotes.set("PauseChamp", "https://cdn.betterttv.net/emote/5cd6b08cf1dac14a18c4b61f/1x.webp");
 emotes.set("pepeDS", "https://cdn.betterttv.net/emote/5b444de56b9160327d12534a/1x.webp");
 emotes.set("PotPls", "https://cdn.betterttv.net/emote/6237419706fd6a9f5be790b4/1x.webp");
-emotes.set("RareMonkey", "https://cdn.betterttv.net/emote/55f1cc2b4bbea27f0a7cb210/2x.webp");
-emotes.set("Ratir", "https://cdn.betterttv.net/emote/636d7437b9076d0aaebb9d39/3x.webp");
+emotes.set("RareMonkey", "https://cdn.betterttv.net/emote/55f1cc2b4bbea27f0a7cb210/1x.webp");
+emotes.set("Ratir", "https://cdn.betterttv.net/emote/636d7437b9076d0aaebb9d39/1x.webp");
 emotes.set("SAMIRAING", "https://cdn.betterttv.net/emote/62768c073c6f14b6884738a1/1x.webp");
 emotes.set("Saul3D", "https://cdn.betterttv.net/emote/621424c506fd6a9f5be53a9b/1x.webp");
 emotes.set("tenseSmash", "https://cdn.betterttv.net/emote/5d20ef02e1cfde376e532cc0/1x.webp");
@@ -231,7 +225,7 @@ emotes.set("actually", "https://cdn.7tv.app/emote/01FWZPG2780008F59F7E75MRE8/1x.
 emotes.set("AINTNOWAY", "https://cdn.7tv.app/emote/01GDDQVMH000038Q48APH8VE3Q/1x.webp");
 emotes.set("BLIZZARD", "https://cdn.7tv.app/emote/01G50B7E580002P97QQ94BDV2H/1x.webp");
 emotes.set("bla", "https://cdn.7tv.app/emote/01HBVADK180003KFD14YHJ4PRZ/1x.webp");
-emotes.set("EDM", "https://cdn.7tv.app/emote/01F6W1T7XR0002M7WQ84WYZ5HF/4x.webp");
+emotes.set("EDM", "https://cdn.7tv.app/emote/01F6W1T7XR0002M7WQ84WYZ5HF/1x.webp");
 emotes.set("FREEDOM", "https://cdn.7tv.app/emote/01H3CWK3G80001DM59871GTT8N/1x.webp");
 emotes.set("IAMSTEVE", "https://cdn.7tv.app/emote/01J74KW6G00000R8ARQ6357TDP/1x.webp");
 emotes.set("HolyFuck", "https://cdn.7tv.app/emote/01G9SM9P500004R7CKHZJKGT3N/1x.webp");
@@ -244,18 +238,39 @@ emotes.set("AlienDefault", "https://cdn.7tv.app/emote/01HB3JDHTG0005HE0A9M4Z2TTX
 emotes.set("L9TURBOAKSHAN", "https://cdn.7tv.app/emote/01HCBKK9J0000B78KRZZ461WR2/1x.webp");
 emotes.set("L9TURBOJAM", "https://cdn.7tv.app/emote/01FH1M09GG000BF1F0BAH6RF1S/1x.webp");
 emotes.set("less", "https://cdn.7tv.app/emote/01HG6P6HFR000BMG8TJHG4W858/1x.webp");
-emotes.set("RIOT", "https://cdn.7tv.app/emote/01FS13P9T0000600V9N65KHQK7/4x.webp");
+emotes.set("RIOT", "https://cdn.7tv.app/emote/01FS13P9T0000600V9N65KHQK7/1x.webp");
 emotes.set("RIVENING", "https://cdn.7tv.app/emote/01G7AGAHXG00000KEMXPDMQYY9/1x.webp");
 emotes.set("RUNNING", "https://cdn.7tv.app/emote/01FB583TXG000C0Z8TR69QBAKP/1x.webp");
 emotes.set("SettUlted", "https://cdn.7tv.app/emote/01GXZTKMZ8000D5XC265K530KE/1x.webp");
 emotes.set("sex", "https://cdn.7tv.app/emote/01FY6CAAHG000FWWXFD46PASF9/1x.webp");
 emotes.set("SKINWALKER", "https://cdn.7tv.app/emote/01FS2G2F400002F97PTSA4XGK4/1x.webp");
-emotes.set("Worth", "https://cdn.7tv.app/emote/01FM102KS00008TM5NY9QEGS60/4x.webp");
+emotes.set("Worth", "https://cdn.7tv.app/emote/01FM102KS00008TM5NY9QEGS60/1x.webp");
 emotes.set("ZiggsJAM", "https://cdn.7tv.app/emote/01GZHNRDK00008MPCP0AD5VJSH/1x.webp");
+emotes.set("coffinPLZ", "https://cdn.betterttv.net/emote/5e9e978c74046462f7674f9f/1x.webp");
+emotes.set("COPIUM", "https://cdn.betterttv.net/emote/5f64475bd7160803d895a112/1x.webp");
+emotes.set("LeTroll", "https://cdn.betterttv.net/emote/60bc0026f8b3f62601c39397/1x.webp");
+emotes.set("ICANT", "https://cdn.betterttv.net/emote/6127c387af28e956864a3dec/1x.webp");
+emotes.set("modCheck", "https://cdn.betterttv.net/emote/6044e6eb306b602acc59882e/1x.webp");
+emotes.set("ARELIONING", "https://cdn.7tv.app/emote/01GRWCJEC80009DGWVJ347RDS0/1x.webp");
+emotes.set("awaw", "https://cdn.7tv.app/emote/01HEEYJ1800004F2B5D9XYEE6R/1x.webp");
+emotes.set("Cinema", "https://cdn.7tv.app/emote/01GBFDVP18000CRDCG0DV7KEMY/1x.webp");
+emotes.set("GIGABIN", "https://cdn.7tv.app/emote/01GPR7G2ER00081V29Z3EHD2YF/1x.webp");
+emotes.set("grunt", "https://cdn.7tv.app/emote/01J8QP7JJG000EBB2R9NW4ZZE3/1x.webp");
+emotes.set("gruntVibe", "https://cdn.7tv.app/emote/01JPF5KX1ZTYD8P1TEPR9KXB7H/1x.webp");
+emotes.set("LPLING", "https://cdn.7tv.app/emote/01GQMW56KR0008D30FETHEN7S7/1x.webp");
+emotes.set("wawa", "https://cdn.7tv.app/emote/01G61H421G0006Z5WTGWA7994Q/1x.webp");
+emotes.set("gman", "https://cdn.7tv.app/emote/01GQRA2H9R0007GKHFGSQHXHCQ/1x.webp");
+emotes.set("o7", "https://cdn.7tv.app/emote/01FS5ZCFG0000500DPPCXJWCP8/1x.webp");
 //const end_time = performance.now();
 //console.log(`Importing emotes took ${end_time - start_time}ms`)
 
-/*loadChatMessage(chat3);
+
+/*const chat1 = {id: 42, user: "mrscooby_doo", color: "#1E90FF", content: "hi MONK KEKW EEEY!!!"};
+const chat2 = {id: 44, user: "stellamelonn", color: "#FF69B4", content :"EDM"};
+const chat3 = {id: 50, user: "dubstep_dalton", color: "#C91F1F", content: "ant to submit a video? Rules: Vid KEKW must be safe for Twitch, 60 seconds or less, and be a working YouTube, Tiktok, KEKW Instagram, or Twitter link. Each request costs $3. Click this link and put your vid link in the donation message by itself: https://streamelements.com/jimmyhere/tip All tips are final and much appreciated. I have the right to not watch/listen to requests."}
+
+
+loadChatMessage(chat3);
 loadChatMessage(chat2);
 loadChatMessage(chat2);
 loadChatMessage(chat1);

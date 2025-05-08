@@ -97,16 +97,18 @@ h4 {
     float: left;
     font-weight: 700;
     vertical-align: baseline;
+    line-height: 1.5rem;
 }
 
 .message-content {
     display: border-box;
     font-weight: 400;
     vertical-align: baseline;
-    line-height: 1rem;
+    line-height: 1.5rem;
 }
 
 .emote-container {
+    margin: 0 5px 0 0;
     display: inline-block;
     position: relative;
     unicode-bidi: isolate;
@@ -114,7 +116,7 @@ h4 {
 }
 
 .emote-img {
-    margin: -0.5rem 0;
+    margin: -1.5rem 0;
 }
 
 /* FOOTER */
