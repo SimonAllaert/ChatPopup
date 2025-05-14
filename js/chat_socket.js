@@ -25,14 +25,18 @@ const loadChatMessage = (message_object) => {
         //console.log(emote);
         //console.log(token);
         if (emote !== undefined) {
-            const emote_span = document.createElement("div");
-            emote_span.classList.add("emote-container");
+            const emote_container = document.createElement("div");
+            emote_container.classList.add("emote-container");
             const emote_img = new Image();
             emote_img.classList.add("emote-img");
             emote_img.src = emote;
             emote_img.alt = token;
-            content.appendChild(emote_span);
-            emote_span.appendChild(emote_img);
+            emote_container.appendChild(emote_img);
+            const emote_tooltip = document.createElement("span");
+            emote_tooltip.classList.add("emote-tooltip");
+            emote_tooltip.innerText = token;
+            emote_container.appendChild(emote_tooltip);
+            content.appendChild(emote_container);
         }
         else {
             content.append(`${token} `);

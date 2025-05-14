@@ -115,6 +115,23 @@ h4 {
     vertical-align: baseline;
 }
 
+.emote-container:hover .emote-tooltip {
+    visibility: visible;
+}
+
+.emote-tooltip {
+    padding: 3px 6px 3px 6px;
+    margin: 0 0 6px 0;
+    position: absolute;
+    line-height: 1.2rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    background-color: #FFFFFF;
+    color: #0E0E10;
+    visibility: hidden;
+    text-align: center;
+}
+
 .emote-img {
     margin: -1.3rem 0;
 }
